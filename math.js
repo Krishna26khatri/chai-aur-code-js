@@ -1,0 +1,8 @@
+console.log(Math)
+console.log(Math.abs(-40))
+console.log(Math.round(4.235))
+console.log(Math.ceil(56.23))
+console.log(Math.floor(45.23))
+console.log(Math.min(4,2,69,36))
+console.log(Math.max(53,25,36))
+console.log(Math.random()*(20-15+1)+15)

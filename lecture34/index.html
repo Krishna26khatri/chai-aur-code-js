@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style="background-color: rgb(11, 8, 8); color: white;">
+    <ul id="ulitems">
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>React Js</li>
+    </ul>
+</body>
+<script>
+    //Add langauges in the list 
+    function addlanguage(langname){
+      const li = document.createElement('li')
+      li.innerHTML=`${langname}`
+      document.querySelector('#ulitems').appendChild(li)
+    }
+    addlanguage("Ruby")
+    addlanguage("C++")
+
+    //Add languages in a optimized way
+    function optilang(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('#ulitems').appendChild(li)
+    }
+    optilang('Node Js')
+    optilang("Java")
+
+    //Edit langueges of the list
+    const secondlang = document.querySelector("li:nth-child(2)")
+    // secondlang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli)
+
+    //edit language
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+    
+
+</script>
+</html>
